@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budget Tracking</title>
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <!-- <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    /> -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/a6f9ea1d0a.js" crossorigin="anonymous"></script>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="budgetstyle.css" />
+  </head>
+  <body>
+    <nav class="sidebar close">
+      <header>
+          <div class="image-text">
+              <span class="image">
+                  <img src="./apple-touch-icon.png" alt="">
+              </span>
+
+              <div class="text logo-text">
+                  <span class="name">The</span>
+                  <span class="profession">ProductivityGuru</span>
+              </div>
+          </div>
+
+          <i class='bx bx-chevron-right toggle'></i>
+      </header>
+
+      <div class="menu-bar">
+          <div class="menu">
+
+              <!-- <li class="search-box">
+                  <i class='bx bx-search icon'></i>
+                  <input type="text" placeholder="Search...">
+              </li> -->
+
+              <ul class="menu-links">
+                  <li class="nav-link">
+                      <a href="./calendarindex.html">
+                        <i class="fa-solid fa-calendar-check icon"></i>
+                          <span class="text nav-text">Calender</span>
+                      </a>
+                  </li>
+
+                  <li class="nav-link">
+                      <a href="">
+                        <i class="fa-solid fa-file-invoice-dollar icon"></i>
+                          <span class="text nav-text">Budget</span>
+                      </a>
+                  </li>
+
+                  <li class="nav-link">
+                      <a href="./notesindex.html">
+                        <i class="fa-solid fa-note-sticky icon"></i>
+                          <span class="text nav-text">Notes</span>
+                      </a>
+                  </li>
+
+                  <li class="nav-link">
+                      <a href="./todoindex.html">
+                        <i class="fa-solid fa-list-check icon"></i>
+                          <span class="text nav-text">To-Do</span>
+                      </a>
+                  </li>
+
+                  <li class="nav-link">
+                      <a href="./pomodoroindex.html">
+                        <i class="fa-solid fa-stopwatch-20 icon"></i>
+                          <span class="text nav-text">Pomodoro</span>
+                      </a>
+                  </li>
+
+                  <li class="nav-link">
+                      <a href="./index.html">
+                        <i class="fa-solid fa-house icon"></i>
+                          <span class="text nav-text">Home</span>
+                      </a>
+                  </li>
+
+              </ul>
+          </div>
+
+         
+      </div>
+
+  </nav>
+  <section class="home">
+    <div class="text">Track your Budget</div>
+    <div class="budget-wrapper">
+      <div class="container">
+        <div class="sub-container">
+          <!-- Budget -->
+          <div class="total-amount-container">
+            <h3>Budget</h3>
+            <p class="hide error" id="budget-error">
+              Value cannot be empty or negative
+            </p>
+            <input
+              type="number"
+              id="total-amount"
+              placeholder="Enter Total Amount"
+            />
+            <button class="submit" id="total-amount-button">Set Budget</button>
+          </div>
+
+          <!-- Expenditure -->
+          <div class="user-amount-container">
+            <h3>Expenses</h3>
+            <p class="hide error" id="product-title-error">
+              Values cannot be empty
+            </p>
+            <input
+              type="text"
+              class="product-title"
+              id="product-title"
+              placeholder="Enter Title of Product"
+            />
+            <input
+              type="number"
+              id="user-amount"
+              placeholder="Enter Cost of Product"
+            />
+            <button class="submit" id="check-amount">Check Amount</button>
+          </div>
+        </div>
+        <!-- Output -->
+        <div class="output-container flex-space">
+          <div>
+            <p>Total Budget</p>
+            <span id="amount">0</span>
+          </div>
+          <div>
+            <p>Expenses</p>
+            <span id="expenditure-value">0</span>
+          </div>
+          <div>
+            <p>Balance</p>
+            <span id="balance-amount">0</span>
+          </div>
+        </div>
+      </div>
+      <!-- List -->
+      <div class="list">
+        <h3>Expense List</h3>
+        <div class="list-container" id="list"></div>
+      </div>
+    </div>
+  </section>
+    
+    <!-- Script -->
+    <script src="budgetscript.js"></script>
+  </body>
+</html>

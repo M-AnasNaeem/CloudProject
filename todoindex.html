@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Todo List</title>
+    <link rel="stylesheet" href="todostyle.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/a6f9ea1d0a.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="sidebar close">
+      <header>
+        <div class="image-text">
+          <span class="image">
+            <img src="./apple-touch-icon.png" alt="">
+          </span>
+
+          <div class="text logo-text">
+            <span class="name">The</span>
+            <span class="profession">ProductivityGuru</span>
+          </div>
+        </div>
+
+        <i class="bx bx-chevron-right toggle"></i>
+      </header>
+
+      <div class="menu-bar">
+        <div class="menu">
+          <!-- <li class="search-box">
+            <i class="bx bx-search icon"></i>
+            <input type="text" placeholder="Search..." />
+          </li> -->
+
+          <ul class="menu-links">
+            <li class="nav-link">
+              <a href="./calendarindex.html">
+                <i class="fa-solid fa-calendar-check icon"></i>
+                <span class="text nav-text">Calender</span>
+              </a>
+            </li>
+
+            <li class="nav-link">
+              <a href="./budgetindex.html">
+                <i class="fa-solid fa-file-invoice-dollar icon"></i>
+                <span class="text nav-text">Budget</span>
+              </a>
+            </li>
+
+            <li class="nav-link">
+              <a href="./notesindex.html">
+                <i class="fa-solid fa-note-sticky icon"></i>
+                <span class="text nav-text">Notes</span>
+              </a>
+            </li>
+
+            <li class="nav-link">
+              <a href="">
+                <i class="fa-solid fa-list-check icon"></i>
+                <span class="text nav-text">To-Do</span>
+              </a>
+            </li>
+
+            <li class="nav-link">
+              <a href="./pomodoroindex.html">
+                <i class="fa-solid fa-stopwatch-20 icon"></i>
+                <span class="text nav-text">Pomodoro</span>
+              </a>
+            </li>
+
+            <li class="nav-link">
+              <a href="./index.html">
+                <i class="fa-solid fa-house icon"></i>
+                <span class="text nav-text">Home</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- <div class="bottom-content">
+              <li class="">
+                  <a href="#">
+                      <i class='bx bx-log-out icon' ></i>
+                      <span class="text nav-text">Logout</span>
+                  </a>
+              </li>
+
+              <li class="mode">
+                  <div class="sun-moon">
+                      <i class='bx bx-moon icon moon'></i>
+                      <i class='bx bx-sun icon sun'></i>
+                  </div>
+                  <span class="mode-text text">Dark mode</span>
+
+                  <div class="toggle-switch">
+                      <span class="switch"></span>
+                  </div>
+              </li>
+              
+          </div> -->
+      </div>
+    </nav>
+    <section class="home">
+      <div class="text">To-Do List</div>
+      <div class="wrapper">
+        <div class="task-input">
+          <img src="bars-staggered-solid.svg" alt="icon" />
+          <input type="text" placeholder="Add a new task" />
+        </div>
+        <div class="controls">
+          <div class="filters">
+            <span class="active" id="all">All</span>
+            <span id="pending">Pending</span>
+            <span id="completed">Completed</span>
+          </div>
+          <button class="clear-btn">Clear All</button>
+        </div>
+        <ul class="task-box"></ul>
+      </div>
+    </section>
+
+    <script src="todoscript.js"></script>
+  </body>
+</html>

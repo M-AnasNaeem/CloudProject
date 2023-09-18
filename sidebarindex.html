@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="sidebarstyle.css" />
+    <title>Dashboard</title>
+    <!----===== Boxicons CSS ===== -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/a6f9ea1d0a.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--<title>Dashboard Sidebar Menu</title>-->
+  </head>
+  <body>
+    <nav class="sidebar close">
+      <header>
+        <div class="image-text">
+          <span class="image">
+            <img src="./apple-touch-icon.png" alt="" />
+          </span>
+
+          <div class="text logo-text">
+            <span class="name">The</span>
+            <span class="profession">ProductivityGuru</span>
+          </div>
+        </div>
+
+        <i class="bx bx-chevron-right toggle"></i>
+      </header>
+
+      <div class="menu-bar">
+        <div class="menu">
+          <ul class="menu-links">
+            <li class="nav-link">
+              <a href="./calendarindex.html">
+                <i class="fa-solid fa-calendar-check icon"></i>
+                <span class="text nav-text">Calender</span>
+              </a>
+            </li>
+
+            <li class="nav-link">
+              <a href="./budgetindex.html">
+                <i class="fa-solid fa-file-invoice-dollar icon"></i>
+                <span class="text nav-text">Budget</span>
+              </a>
+            </li>
+
+            <li class="nav-link">
+              <a href="./notesindex.html">
+                <i class="fa-solid fa-note-sticky icon"></i>
+                <span class="text nav-text">Notes</span>
+              </a>
+            </li>
+
+            <li class="nav-link">
+              <a href="./todoindex.html">
+                <i class="fa-solid fa-list-check icon"></i>
+                <span class="text nav-text">To-Do</span>
+              </a>
+            </li>
+
+            <li class="nav-link">
+              <a href="./pomodoroindex.html">
+                <i class="fa-solid fa-stopwatch-20 icon"></i>
+                <span class="text nav-text">Pomodoro</span>
+              </a>
+            </li>
+
+            <li class="nav-link">
+              <a href="./index.html">
+                <i class="fa-solid fa-house icon"></i>
+                <span class="text nav-text">Home</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- <div class="bottom-content">
+                <li class="">
+                    <a href="#">
+                        <i class='bx bx-log-out icon' ></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark mode</span>
+
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+                
+            </div> -->
+      </div>
+    </nav>
+
+    <section class="home">
+      <div class="text">
+        TheProductivityGuru <span class="purple"> Dashboard</span>
+      </div>
+
+      <div class="row">
+        <div class="col-md-2">
+          <img
+            src="./sidebarassets/127.0.0.1_5500_budgetindex.html (1).png"
+            alt="Picture 1"
+          />
+          <p>
+            Track your expenses and stay on top of your finances with our
+            powerful budget tracker.
+          </p>
+
+          <a href="./budgetindex.html" class="nav__link--btn"
+            ><button class="btn">Get Productive</button></a
+          >
+        </div>
+        <div class="col-md-2">
+          <img
+            src="./sidebarassets/127.0.0.1_5500_todoindex.html.png"
+            alt="Picture 2"
+          />
+          <p>
+            Efficiently manage your tasks and stay on top of your to-do list
+            with our comprehensive task management feature.
+          </p>
+          <a href="./todoindex.html" class="nav__link--btn"
+            ><button class="btn">Get Productive</button></a
+          >
+        </div>
+        <div class="col-md-2">
+          <img
+            src="./sidebarassets/127.0.0.1_5500_pomodoroindex.html.png"
+            alt="Picture 3"
+          />
+          <p>
+            Stay focused and boost your productivity with our Pomodoro timer
+            feature, designed to help you work in focused bursts.
+          </p>
+          <a href="./pomodoroindex.html" class="nav__link--btn"
+            ><button class="btn">Get Productive</button></a
+          >
+        </div>
+        <div class="col-md-2">
+          <img
+            src="./sidebarassets/127.0.0.1_5500_notesindex.html.png"
+            alt="Picture 4"
+          />
+          <p>
+            Take notes and jot down ideas quickly and easily with our intuitive
+            note-taking feature.
+          </p>
+          <a href="./notesindex.html" class="nav__link--btn"
+            ><button class="btn">Get Productive</button></a
+          >
+        </div>
+        <div class="col-md-2">
+          <img
+            src="./sidebarassets/127.0.0.1_5500_calendarindex.html (2).png"
+            alt="Picture 5"
+          />
+          <p>
+            Stay on top of your schedule and never miss a deadline with our
+            easy-to-use calendar feature.
+          </p>
+          <a href="./calendarindex.html" class="nav__link--btn"
+            ><button class="btn">Get Productive</button></a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- --------------------------------------- -->
+
+    <script>
+      const body = document.querySelector("body"),
+        sidebar = body.querySelector("nav"),
+        toggle = body.querySelector(".toggle"),
+        searchBtn = body.querySelector(".search-box"),
+        modeSwitch = body.querySelector(".toggle-switch"),
+        modeText = body.querySelector(".mode-text");
+
+      toggle.addEventListener("click", () => {
+        sidebar.classList.toggle("close");
+      });
+
+      searchBtn.addEventListener("click", () => {
+        sidebar.classList.remove("close");
+      });
+
+      modeSwitch.addEventListener("click", () => {
+        body.classList.toggle("dark");
+
+        if (body.classList.contains("dark")) {
+          modeText.innerText = "Light mode";
+        } else {
+          modeText.innerText = "Dark mode";
+        }
+      });
+    </script>
+  </body>
+</html>
